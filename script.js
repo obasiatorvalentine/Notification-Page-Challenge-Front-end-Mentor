@@ -53,21 +53,26 @@
       }
   })
   
-  function space(){
-    if (userNumber.value.length == 4) {
-      userNumber.value = userNumber.value + ' ';
-    }
-    else if (userNumber.value.length == 9){
-      userNumber.value = userNumber.value + ' ';
-    }
-    else if (userNumber.value.length == 14){
-      userNumber.value = userNumber.value + ' ';
+  function space(e){
+    if (e.key != 'Backspace') {
+      if (userNumber.value.length == 4) {
+        userNumber.value = userNumber.value + ' ';
+      }
+      else if (userNumber.value.length == 9){
+        userNumber.value = userNumber.value + ' ';
+      }
+      else if (userNumber.value.length == 14){
+        userNumber.value = userNumber.value + ' ';
+      }
     }
   }
   
   function happen (e, x){
+    console.log(e)
     if (e.code.indexOf('Digit') <= -1) {
-     x.value = x.value.slice(0, -1)
+      if (e.key != 'Backspace') {
+        x.value = x.value.slice(0, -1)
+      }
     }
-    }
+  }
     
