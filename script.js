@@ -66,7 +66,7 @@
   }
   
   function happen (e, x){
-    if (e.code.indexOf('Digit') <= -1) {
+    if ((e.keyCode >= 65) && (e.keyCode <= 90)) {
      x.value = x.value.slice(0, -1)
     }
     }
