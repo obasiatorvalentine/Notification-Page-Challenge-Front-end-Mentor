@@ -1,0 +1,260 @@
+
+.attribution { 
+font-size: 11px; text-align: center; 
+position: fixed;
+bottom: 5px;
+}
+.attribution a { 
+color: hsl(228, 45%, 44%); 
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+  .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: centern;
+  margin: 0;
+  width: 100%;
+}
+.top-container {
+  width: 100%;
+  margin: 0;
+  background-image: url("images/bg-main-mobile.png");
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.back-card {
+  background-image: url(images/bg-card-back.png);
+  height: 55%;
+  left: 20%;
+  top: 10%;
+  max-width: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  right: 50px;
+}
+.front-card {
+  background-image: url(images/bg-card-front.png);
+  height: 55%;
+  left: 5%;
+  bottom: 21%;
+  max-width: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.cvv-bar {
+  position: relative;
+  top: 40%;
+  left: 80%;
+  color: white;
+  width: 40px;
+}
+.circles {
+  height: 40%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -40%;
+  left: 20px;
+}
+.large-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  left: 1%;
+}
+.small-circle {
+  border: 1px solid rgb(255, 255, 255);
+  height: 15px;
+  width: 15px;
+  margin-left: 15px;
+  border-radius: 50%;
+}
+.card-images {
+  height: 320px;
+  min-width: 80%;
+}
+.bottom-container {
+  margin-top: 80px;
+  width: 80%;
+  margin-bottom: 40px;
+}
+.card-number {
+  position: relative;
+  top: 80px;
+  left: 25px;
+  width: 70%;
+  color: white;
+}
+.card-holder-name-and-expiry-date {
+  position: relative;
+  top: 80px;
+  left: 25px;
+  width: 70%;
+}
+.expiry-date {
+  position: relative;
+  margin-left: 200px;
+  font-size: 10px;
+  color: white;
+  top: -6px;
+}
+.card-holder-name {
+  text-transform: uppercase;
+  color: rgb(192, 192, 192);
+  font-size: 10px;
+  position: relative;
+  top: 10px;
+
+}
+input {
+  width: 100%;
+}
+input {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-style: groove;
+}
+input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+  }
+form > p {
+  margin-bottom: 5px;
+  
+}
+.exp > div {
+  width: 50%;
+}
+#month, #year {
+  width: 60px;
+  margin-right: 15px;
+}
+#cvc {
+  width: 100%;
+}
+.exp {
+  display: flex;
+}
+#confirm-btn:hover {
+  cursor: pointer;
+}
+#confirm-btn {
+  margin-top: 20px;
+  color: white;
+  padding: 15px;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 10px;
+}
+.card-number > p {
+  letter-spacing: 3px;
+  text-align: center;
+  width: 250px;
+}
+.finished-container {
+  margin-top: 80px;
+  width: 300px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+#continue-btn {
+  text-align: center;
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 100%;
+  text-decoration: none;
+}
+.finished-container > p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.warning {
+  font-size: 10px;
+  color: red;
+}
+
+@media (min-width: 700px) {
+  .card-images {
+   
+   position: relative;
+   top: 20%;
+  
+   margin-left: 40%;
+ }
+ form, #confirm-btn {
+   
+    width: 200px;
+    
+    position: relative;
+    margin-left: 30%;
+    bottom: 50px;
+  }
+}
+@media (min-width: 550px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 100vh;
+  }
+  .top-container {
+    background-image: url(images/bg-main-desktop.png);
+    height: 100%;
+    width: 100%;
+  }
+  form, #confirm-btn {
+    max-width: 400px;
+    min-width: 350px;
+    position: relative;
+    left: 40%;
+  }
+  #confirm-btn {
+    border: none;
+  }
+  .card-images {
+   
+    position: relative;
+    top: 20%;
+  }
+  .back-card{
+    position: relative;
+    top: 230px;
+    min-width: 300px;
+    left: 30%;
+  }
+  .front-card {
+    position: relative;
+    object-fit: cover;
+    bottom: 180px;
+    
+    width: 600px;
+    left: 10%;
+  
+  }
+  .finished-container {
+    position: relative;
+    margin-left: 50%;
+  }
+}
